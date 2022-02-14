@@ -16,7 +16,7 @@ class Nacos
 {
     private static $clientClass;
 
-    public static function init($host, $env, $dataId, $group, $tenant)
+    public static function init($host, $env, $dataId, $group, $tenant, $userName = "", $password = "")
     {
         static $client;
         if ($client == null) {
@@ -25,6 +25,8 @@ class Nacos
             NacosConfig::setDataId($dataId);
             NacosConfig::setGroup($group);
             NacosConfig::setTenant($tenant);
+            NacosConfig::setUserName($userName);
+            NacosConfig::setPassWord($password);
 
             if (getenv("NACOS_ENV") == "local") {
                 LogUtil::info("nacos run in dummy mode");

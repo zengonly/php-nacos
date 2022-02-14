@@ -4,6 +4,7 @@
 forked from neatlife/php-nacos，感谢作者提供的扩展
 - 因该扩展不支持 Nacos 的认证功能，对扩展进行了修改，在发起请求时携带 accessToken
 - @see https://nacos.io/zh-cn/docs/auth.html
+- todo accessToken 写入缓存
 
 [Nacos配置中心](https://github.com/alibaba/nacos)的PHP客户端，更多关于Nacos配置中心的介绍，可以查看[Nacos配置中心Wiki](https://github.com/alibaba/nacos/wiki)。
 

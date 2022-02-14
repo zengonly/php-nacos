@@ -78,6 +78,19 @@ class NacosConfig
     private static $isDebug = false;
 
     /**
+     * 认证：用户名
+     * @see https://nacos.io/zh-cn/docs/auth.html
+     * @var
+     */
+    private static $userName;
+
+    /**
+     * 认证：密码
+     * @var
+     */
+    private static $passWord;
+
+    /**
      * @return string
      */
     public static function getName()
@@ -243,5 +256,37 @@ class NacosConfig
     public static function setIsDebug($isDebug)
     {
         self::$isDebug = $isDebug;
+    }
+
+    /**
+     * @return mixed
+     */
+    public static function getUserName()
+    {
+        return self::$userName;
+    }
+
+    /**
+     * @param mixed $userName
+     */
+    public static function setUserName($userName)
+    {
+        self::$userName = $userName;
+    }
+
+    /**
+     * @return mixed
+     */
+    public static function getPassWord()
+    {
+        return self::$passWord;
+    }
+
+    /**
+     * @param mixed $passWord
+     */
+    public static function setPassWord($passWord)
+    {
+        self::$passWord = $passWord;
     }
 }
